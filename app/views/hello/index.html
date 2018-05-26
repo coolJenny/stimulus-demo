@@ -1,38 +1,43 @@
-<div class="page-header" data-controller="hello">
-    <h1>People</h1>
-    <input id="table-filter"
-           name="table-filter"
-           type="search"
-           data-target="hello.filter"
-           data-action="keyup->hello#typeFilter"/>
+<div class="container text-center">
+    <div class="page-header" data-controller="hello">
+        <h1>Data table Filter using Stimulus Framework</h1><br><br>
+        <div class="text-right form-inline">
+            <label>Filter by: </label> 
+            <input id="table-filter" class="form-control input-sm" 
+            name="table-filter"
+            type="search"
+            data-target="hello.filter"
+            data-action="keyup->hello#typeFilter"/>
+        </div>        
+    </div><br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody class="text-left">
+            <tr class="filterable-row">
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr class="filterable-row">
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr class="filterable-row">
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="filterable-row">
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-    </tr>
-    <tr class="filterable-row">
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-    </tr>
-    <tr class="filterable-row">
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-    </tr>
-    </tbody>
-</table>
